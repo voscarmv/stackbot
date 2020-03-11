@@ -25,8 +25,12 @@ module StackOverflow
             table << [score.to_i, question['title'], question['link']]
           end
       end
-      "Sorry, no results found. Try different search terms." if table.length == 0
-      "These are some relevant questions from StackOverflow, sorted by rating:\n\n#{table.sort.reverse.map {|strings| strings.join(" : ")}.join("\n")}"
+      if table.length > 0
+        search_results = table.sort.reverse.map {|strings| strings.join(" : ")}.join("\n")
+        "Here are some relevant questions from StackOverflow, sorted by rating:\n\n#{search_results}"
+      else
+        return "Sorry, no results found. Try different search terms."
+      end
     end
   end
 
