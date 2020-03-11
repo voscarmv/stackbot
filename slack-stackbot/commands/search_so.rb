@@ -3,15 +3,19 @@ require_relative '../../lib/StackOverflow.rb'
 module SlackStackbot
   module Commands
     class Search < SlackRubyBot::Commands::Base
-      command 'search' do |client, data, _match|
-        input = _match[:expression]
-        result = StackOverflow::Search.new.questions(input)
-        client.say(
-          channel: data.channel,
-          text: result == '' ?
-            'Sorry, no results found. Try different search terms.' :
-            "These are some relevant questions from StackOverflow, sorted by rating:\n\n#{result}"
-          )
+      command 'search'
+      def self.call(client, data, match)
+        if match.names.include?('expression')
+          input = match[:expression]
+          if input == nil
+            client.say(channel: data.channel, text: "Search for what?")
+          else
+            result = StackOverflow::Search.new.questions(input)
+            client.say(channel: data.channel, text: result)
+          end
+        end
+        rescue StandardError => e
+          client.say(channel: data.channel, text: "Sorry, #{e.message}.")
       end
     end
   end
