@@ -32,7 +32,7 @@ module StackOverflow
   class API
     def search(search_string)
       search_string = URI::encode(search_string)
-      api_get("/2.2/similar?order=desc&sort=relevance&title=#{search_string}&site=stackoverflow&filter=!9Tk5iz1Gf")
+      api_get("/2.2/similar?order=desc&sort=relevance&title=#{search_string}&site=stackoverflow")
     end
     def api_get(path)
       url = "https://api.stackexchange.com" + path
