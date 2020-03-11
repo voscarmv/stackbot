@@ -8,24 +8,9 @@ require 'sqlite3'
 require 'optparse'
 
 module StackOverflow
-  class API
-    def search(search_string)
-      search_string = URI::encode(search_string)
-      api_get("/2.2/similar?order=desc&sort=relevance&title=#{search_string}&site=stackoverflow&filter=!9Tk5iz1Gf")
-    end
-    def api_get(path)
-      url = "https://api.stackexchange.com" + path
-      u = URI.parse(url)
-      Net::HTTP.start(u.host, u.port, :use_ssl => true) do |http|
-        response = http.get(u.request_uri)
-        return JSON(response.body)['items']
-      end
-    end
-  end
-  class Command
-    def search_so(search_terms)
-      api = API.new
-      results = api.search(search_terms)
+  class Search
+    def questions(search_terms)
+      results = API.new.search(search_terms)
       questions_list(results)
     end
     def questions_list(questions)
@@ -43,4 +28,20 @@ module StackOverflow
       table.sort.reverse.map {|strings| strings.join(" : ")}.join("\n")
     end
   end
+
+  class API
+    def search(search_string)
+      search_string = URI::encode(search_string)
+      api_get("/2.2/similar?order=desc&sort=relevance&title=#{search_string}&site=stackoverflow&filter=!9Tk5iz1Gf")
+    end
+    def api_get(path)
+      url = "https://api.stackexchange.com" + path
+      u = URI.parse(url)
+      Net::HTTP.start(u.host, u.port, :use_ssl => true) do |http|
+        response = http.get(u.request_uri)
+        return JSON(response.body)['items']
+      end
+    end
+  end
 end
+

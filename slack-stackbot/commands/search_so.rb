@@ -5,7 +5,7 @@ module SlackStackbot
     class Search < SlackRubyBot::Commands::Base
       command 'search' do |client, data, _match|
         input = _match[:expression]
-        client.say(channel: data.channel, text: StackOverflow::Command.new.search_so(input))
+        client.say(channel: data.channel, text: StackOverflow::Search.new.questions(input))
       end
     end
   end
