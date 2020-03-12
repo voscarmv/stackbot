@@ -1,7 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'slack-ruby-bot'
-gem 'stackoverflow'
+# gem 'stackoverflow'
+gem 'rubygems'
+gem 'open-uri'
+gem 'net/http'
+gem 'json'
+gem 'nokogiri'
 gem 'htmlentities'
 gem 'fortune_gem'
 gem 'rubocop'
