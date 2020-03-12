@@ -71,7 +71,7 @@ You may try any such commands on Slack.
 
 ### Run tests
 
-Running `rspec` will thest the previous functionalities. You will need to be connected to the internet to run the tests. Navigate the `spec` directory to find out how the tests are performed. Testing currently returns the following results:
+Running `rspec` will test the previous functionalities. You will need to be connected to the internet to run the tests. Navigate the `spec` directory to find out how the tests are performed. Testing currently returns the following results:
 
 ```
 SlackStackbot::Commands::Default
