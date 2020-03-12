@@ -1,14 +1,17 @@
-# Project Name
+# Stackbot
 
-> One paragraph statement about the project.
+> A bot for Slack that can search StackOverflow questions and display [UNIX fortunes](https://en.wikipedia.org/wiki/Fortune_(Unix)).
 
-Additional description about the project and its features.
+![screenshot](screenshots/screenshot1.png)
+
+![screenshot](screenshots/screenshot2.png)
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Ruby 2.6.5p114 
+- Rubocop 0.80.1
+- RSpec 3.9
+- Visual Studio Code 1.42.1
 
 ## Live Demo
 
@@ -17,15 +20,20 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+It is possible to test Stackbot locally as well as remotely by deploying it to Heroku. You will need both a [Slack](https://www.slack.com) and a [Heroku](https://www.heroku.com) account for this. To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+Make sure you have the following packages installed before continuing:
+
+```
+sudo apt install ruby-full heorku
+gem install bundler rspec
+```
+
 ### Setup
+
+In order to test the bot you will need to [create a Slack APP](https://api.slack.com/apps/new). Once you've created the app, [configure it as a bot](https://api.slack.com/bot-users) and [obtain it's API token](https://api.slack.com/authentication/token-types#bot). You will need the token in order to test the bot.
 
 ### Install
 
