@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe SlackStackbot::Commands::Fortune do
   def app
-    SlackMathbot::Bot.instance
+    SlackStackbot::Bot.instance
   end
   let (:file) {
     File.open('lib/fortunes').read
