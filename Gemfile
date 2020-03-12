@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'slack-ruby-bot'
-# gem 'stackoverflow'
 gem 'nokogiri'
 gem 'htmlentities'
 gem 'fortune_gem'
