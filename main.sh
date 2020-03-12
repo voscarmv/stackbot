@@ -1,1 +1,2 @@
-irb main.rb
+#!/bin/bash
+foreman start
