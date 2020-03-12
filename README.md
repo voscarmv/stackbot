@@ -34,11 +34,10 @@ It is possible to test Stackbot locally as well as remotely by deploying it to H
 
 ### Prerequisites
 
-Make sure you have the following packages installed before continuing:
+Make sure you [install Ruby](https://www.ruby-lang.org/en/documentation/installation/) and have the following packages installed before continuing:
 
 ```
-$ sudo apt install ruby-full heorku
-$ gem install bundler rspec
+$ gem install bundler rspec foreman
 ```
 
 ### Setup
