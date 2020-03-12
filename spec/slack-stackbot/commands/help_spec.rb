@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe SlackStackbot::Commands::Help do
   def app
-    SlackStackbot::App.new
+    SlackStackbot::Bot.instance
   end
   let (:help_message) {
     'Give me commands by typing _*@Stackbot command [arguments]*_

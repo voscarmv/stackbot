@@ -1,4 +1,4 @@
-module SlackStackot
+module SlackStackbot
   module Commands
     class Default < SlackRubyBot::Commands::Base
       command 'about'

@@ -1,6 +1,9 @@
 require 'spec_helper'
 
-describe SlackStackot::Commands::Default do
+describe SlackStackbot::Commands::Default do
+  def app
+    SlackMathbot::Bot.instance
+  end
   it 'lowercase' do
     expect(message: 'stackbot').to respond_with_slack_message(SlackStackbot::ABOUT)
   end
