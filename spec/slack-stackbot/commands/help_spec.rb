@@ -9,10 +9,11 @@ describe SlackStackbot::Commands::Help do
 
 Here\'s a complete list of my available commands:
 
-*help* Displays this help message.
-*about* Displays links to more details about me.
-*search* _your search terms_ Searches StackOverflow for relevant questions
-*fortune* Tells a fortune from the classic UNIX game `fortune`
+*help* Display this help message.
+*search* _your search terms_ Search StackOverflow for relevant questions
+*fortune* Tell a fortune from the classic UNIX game `fortune`
+*hi* Say _"hi"_ to me!
+*about* Display links to more details about me.
 
 Example: *@Stackbot search HTML api*'
     }
