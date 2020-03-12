@@ -133,6 +133,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- I used the [Slack Ruby Bot](https://github.com/slack-ruby/slack-ruby-bot) framework to lay the code foundation for the project.
 - I used parts of the code from the [stackoverflow gem](https://github.com/raysrashmi/ruby-stackoverflow) to query StackOverflow questions by using the [StackExchange API](https://api.stackexchange.com/docs/similar)
 - I also used parts of the code from [fortune_gem](https://github.com/nodanaonlyzuul/fortune_gem) to build my implementation of `fortune`.
 - I copied the contents of the fortune files from the [fortune-mod ubuntu package](https://launchpad.net/ubuntu/+source/fortune-mod) into my `lib/fortunes` file for my `fortune` implementation.
