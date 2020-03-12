@@ -47,11 +47,11 @@ $ echo 'SLACK_API_TOKEN=your_token_here' > .env
 $ foreman start
 ```
 
-This should install all ruby gems, generate an `.env` file containing the API token from the Setup, and start a local server where Stackbot lives.
+This should install all ruby gems, generate an `.env` file containing the API token from the Setup, and start a local server where Stackbot will live.
 
 ### Usage
 
-Once Slackbot is running either locally or remotely in Heroku, you can log into the Slack workspace where you installed it and invite it to your channel by typing `/invite @Stackbot`.
+Once Stackbot is running either locally or remotely in Heroku, you can log into the Slack workspace where you installed it and invite it to your channel by typing `/invite @Stackbot`.
 
 Typing `@Stackbot help` will display the following message:
 
