@@ -1,23 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'slack-ruby-bot'
-gem 'nokogiri'
-gem 'htmlentities'
-gem 'fortune_gem'
-gem 'rubocop'
-gem 'puma'
-gem 'sinatra'
-gem 'dotenv'
 gem 'celluloid-io'
+gem 'dotenv'
+gem 'fortune_gem'
+gem 'htmlentities'
+gem 'nokogiri'
+gem 'puma'
+gem 'rubocop'
+gem 'sinatra'
+gem 'slack-ruby-bot'
 
 group :development, :test do
-  gem 'rake'
   gem 'foreman'
+  gem 'rake'
 end
 
 group :test do
-  gem 'rspec'
   gem 'rack-test'
+  gem 'rspec'
   gem 'vcr'
   gem 'webmock'
 end

@@ -5,6 +5,6 @@ describe SlackRubyBot::Commands::Hi do
     SlackMathbot::Bot.instance
   end
   it 'says hi' do
-    expect(message: "stackbot hi").to respond_with_slack_message('Hi <@user>!')
+    expect(message: 'stackbot hi').to respond_with_slack_message('Hi <@user>!')
   end
 end

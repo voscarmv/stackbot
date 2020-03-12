@@ -1,4 +1,4 @@
-require_relative '../../lib/Fortune.rb'
+require_relative '../../lib/fortune.rb'
 
 module SlackStackbot
   module Commands
