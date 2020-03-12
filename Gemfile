@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'slack-ruby-bot'
 gem 'stackoverflow'
+gem 'htmlentities'
 gem 'fortune_gem'
 gem 'rubocop'
-gem 'slack-ruby-bot'
 gem 'puma'
 gem 'sinatra'
 gem 'dotenv'

@@ -3,9 +3,7 @@ require 'open-uri'
 require 'net/http'
 require 'json'
 require 'nokogiri'
-require 'terminal-table/import'
-require 'sqlite3'
-require 'optparse'
+require 'htmlentities'
 
 module StackOverflow
   class Search
@@ -27,6 +25,8 @@ module StackOverflow
       end
       if table.length > 0
         search_results = table.sort.reverse.map {|strings| strings.join(" : ")}.join("\n")
+        coder = HTMLEntities.new
+        search_results = coder.decode(search_results)
         "Here are some relevant questions from StackOverflow, sorted by rating:\n\n#{search_results}"
       else
         return "Sorry, no results found. Try different search terms."
