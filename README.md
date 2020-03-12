@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+A live Demo is currently unavailable as it would require a Premium Heroku account.
 
 
 ## Getting Started
