@@ -4,10 +4,10 @@ describe SlackStackbot::Commands::Search do
   def app
     SlackStackbot::Bot.instance
   end
-  let (:some_results) do
+  let(:some_results) do
     StackOverflow::Search.new.questions('HTML api')
   end
-  let (:no_results) do
+  let(:no_results) do
     StackOverflow::Search.new.questions('sakdjaskldjhsdawe3')
   end
   it 'StackOverflow search returns some results' do

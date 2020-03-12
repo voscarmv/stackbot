@@ -4,7 +4,7 @@ describe SlackStackbot::Commands::Help do
   def app
     SlackStackbot::Bot.instance
   end
-  let (:help_message) do
+  let(:help_message) do
     'Give me commands by typing _*@Stackbot command [arguments]*_
 
 Here\'s a complete list of my available commands:

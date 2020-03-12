@@ -16,11 +16,11 @@ module StackOverflow
       table = []
       questions.each do |question|
         score = if question['score']
-                  question['score'] > 0 ? "+#{question['score']}" : question['score']
+                  (question['score']).positive? ? "+#{question['score']}" : question['score']
                 else
                   0
                 end
-        table << [score.to_i, question['title'], question['link']] if score.to_i > 0
+        table << [score.to_i, question['title'], question['link']] if score.to_i.positive?
       end
       if !table.empty?
         search_results = table.sort.reverse.map { |strings| strings.join(' : ') }.join("\n")
@@ -35,7 +35,7 @@ module StackOverflow
 
   class API
     def search(search_string)
-      search_string = URI.encode(search_string)
+      search_string = CGI.escape(search_string)
       api_get("/2.2/similar?order=desc&sort=relevance&title=#{search_string}&site=stackoverflow")
     end
 
