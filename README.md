@@ -2,6 +2,8 @@
 
 > A bot for Slack that can search StackOverflow questions and display [UNIX fortunes](https://en.wikipedia.org/wiki/Fortune_(Unix)).
 
+# Screenshots
+
 ![screenshot](screenshots/screenshot1.png)
 
 ![screenshot](screenshots/screenshot2.png)
@@ -53,21 +55,50 @@ Once Slackbot is running either locally or remotely in Heroku, you can log into 
 
 Typing `@Stackbot help` will display the following message:
 
->Give me commands by typing _*@Stackbot command [arguments]*_
+>Give me commands by typing _**@Stackbot command [arguments]**_
 >
 >Here's a complete list of my available commands:
 >
->*help* Display this help message.
->*search* _your search terms_ Search StackOverflow for relevant questions
->*fortune* Tell a fortune from the classic UNIX game `fortune`
->*hi* Say _"hi"_ to me!
->*about* Display links to more details about me.
+>**help** Display this help message.  
+>**search** _your search terms_ Search StackOverflow for relevant questions  
+>**fortune** Tell a fortune from the classic UNIX game `fortune`  
+>**hi** Say _"hi"_ to me!  
+>**about** Display links to more details about me.  
 >
->Example: *@Stackbot search HTML api*
+>Example: **@Stackbot search HTML api**
 
 You may try any such commands on Slack.
 
 ### Run tests
+
+Running `rspec` will thest the previous functionalities. You will need to be connected to the internet to run the tests. Navigate the `spec` directory to find out how the tests are performed. Testing currently returns the following results:
+
+```
+SlackStackbot::Commands::Default
+  lowercase
+  capitalized
+  with about argument
+
+SlackStackbot::Commands::Fortune
+  fortune is contained in fortune file
+
+SlackStackbot::Commands::Help
+  help
+
+SlackRubyBot::Commands::Hi
+  says hi
+
+SlackStackbot::Commands::Search
+  StackOverflow search returns some results
+  StackOverflow search returns no results
+  Search terms missing
+
+SlackStackbot
+  has a version
+
+Finished in 2.09 seconds (files took 1.74 seconds to load)
+10 examples, 0 failures
+```
 
 ### Deployment
 
@@ -83,19 +114,12 @@ $ heroku open
 
 This should keep Stackbot alive in your Heroku app for a while. However, if you want to keep running Stackbot for longer, you'll have to pay for a [premium plan](https://www.heroku.com/pricing).
 
-
-## Authors
+## Author
 
 **Oscar Mier**
 - Github: [@voscarmv](https://github.com/voscarmv)
 - Twitter: [@voscarmv](https://twitter.com/voscarmv)
 - Linkedin: [Oscar Mier](https://www.linkedin.com/in/oscar-mier-072984196/) 
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -109,9 +133,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- I used parts of the code from the [stackoverflow gem](https://github.com/raysrashmi/ruby-stackoverflow) to query StackOverflow questions by using the [StackExchange API](https://api.stackexchange.com/docs/similar)
+- I also used parts of the code from [fortune_gem](https://github.com/nodanaonlyzuul/fortune_gem) to build my implementation of `fortune`.
+- I copied the contents of the fortune files from the [fortune-mod ubuntu package](https://launchpad.net/ubuntu/+source/fortune-mod) into my `lib/fortunes` file for my `fortune` implementation.
+- I created [a prototype](https://github.com/voscarmv/stackoverflow_slack_bot/tree/feature-branch) before this project using git submodules of the aforementioned packages. I've left it in my repositories for reference.
 
 ## 📝 License
 
