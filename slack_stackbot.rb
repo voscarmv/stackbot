@@ -1,0 +1,5 @@
+require 'slack-ruby-bot'
+require_relative 'slack-stackbot/version'
+require_relative 'slack-stackbot/about'
+require_relative 'slack-stackbot/commands'
+require_relative 'slack-stackbot/bot'
