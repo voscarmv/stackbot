@@ -7,4 +7,4 @@ Dir[File.join(File.dirname(__FILE__), 'support', '**/*.rb')].sort.each do |file|
   require file
 end
 
-require 'slack_stackbot'
+require_relative '../slack_stackbot'

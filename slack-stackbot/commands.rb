@@ -1,4 +1,4 @@
-require 'slack-stackbot/commands/fortune'
-require 'slack-stackbot/commands/search_so'
-require 'slack-stackbot/commands/about'
-require 'slack-stackbot/commands/help'
+require_relative 'commands/fortune'
+require_relative 'commands/search_so'
+require_relative 'commands/about'
+require_relative 'commands/help'
