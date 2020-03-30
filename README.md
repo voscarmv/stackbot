@@ -42,7 +42,7 @@ $ gem install bundler rspec foreman
 
 ### Setup
 
-In order to test Stackbot you will need to [create a Slack APP](https://api.slack.com/apps/new). Once you've created the app, [configure it as a bot](https://api.slack.com/bot-users) and install it to your preferred Slack workspace. Don't forget to [save it's API token](https://api.slack.com/authentication/token-types#bot) somewhere. You will need the token in order to test the bot.
+In order to test Stackbot you will need to [create a Slack APP](https://api.slack.com/apps/new). Make sure you create a [*Classic* Slack app](https://api.slack.com/apps?new_classic_app=1), otherwise the bot will *not* work. Once you've created the app, [configure it as a bot](https://api.slack.com/legacy/custom-integrations/bot-users) and install it to your preferred Slack workspace. Don't forget to [save it's API token](https://api.slack.com/legacy/custom-integrations/legacy-tokens) somewhere. You will need the token in order to test the bot.
 
 ### Install
 
