@@ -4,9 +4,9 @@
 
 I decided to create a Slack bot that could search StackOverflow for questions because I mostly use Slack for discussing web development with my teammates. It's handy to have a StackOverflow search available in the middle of a discussion about bugs and computer errors.
 
-This project was [featured in Career Karma](https://careerkarma.com/discussions/projects/stackbot-AUy6FwOt-) as one of the top projects of the month of April, 2020!
-
 I also added a UNIX fortune functionality, just to keep the project fun and entertaining. Fortune outputs sometimes sarcastic or interesting phrases on the screen. This way you won't get bored while you're debugging your code :)
+
+This project was [featured in Career Karma](https://careerkarma.com/discussions/projects/stackbot-AUy6FwOt-) as one of the top projects of the month of April, 2020!
 
 # Video Presentation
 
