@@ -130,6 +130,12 @@ This should keep Stackbot alive in your Heroku app for a while. However, if you 
 - Twitter: [@voscarmv](https://twitter.com/voscarmv)
 - Linkedin: [Oscar Mier](https://www.linkedin.com/in/oscar-mier-072984196/) 
 
+## Future features and improvements
+
+- Extend the variety of available search engines.
+- Add more games other than UNIX Fortunes.
+- Make the bot sentient using AI 🤖🧠
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
